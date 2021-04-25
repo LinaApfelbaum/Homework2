@@ -2,12 +2,10 @@ import csv
 import pathlib
 from json import dump, loads
 
-books_path = str(pathlib.Path(__file__).parent.absolute()) + \
-    '/../data/books.csv'
-users_path = str(pathlib.Path(__file__).parent.absolute()) + \
-    '/../data/users.json'
-result_path = str(pathlib.Path(__file__).parent.absolute()) + \
-    '/../data/result.json'
+parent_dir = str(pathlib.Path(__file__).parent.absolute())
+books_path = parent_dir + "/../data/books.csv"
+users_path = parent_dir + "/../data/users.json"
+result_path = parent_dir + "/../data/result.json"
 
 result = []
 with open(books_path, newline='') as books_file:
